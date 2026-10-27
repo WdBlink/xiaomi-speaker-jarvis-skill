@@ -465,11 +465,15 @@ class VoiceBridgeTests(unittest.TestCase):
         with patch.object(argparse.ArgumentParser, "parse_args", return_value=args), \
                 patch("home_jarvis.xiaomi_voice.XiaomiCloud", return_value=cloud), \
                 patch("home_jarvis.xiaomi_voice.XiaomiSpeaker", return_value=speaker), \
+                patch("home_jarvis.xiaomi_voice.configured_gateway", return_value=self.gateway) as gateway, \
                 patch("home_jarvis.xiaomi_voice.MiniMaxPlanner",
-                      side_effect=PlannerError("private config rejected")), \
+                      side_effect=PlannerError("private config rejected")) as planner, \
                 redirect_stdout(output):
             with self.assertRaises(SystemExit) as exit_context:
                 main()
+        gateway.assert_called_once_with(None)
+        planner.assert_called_once_with("model", self.gateway)
+        cloud.latest_records.assert_not_called()
         self.assertEqual(exit_context.exception.code, 1)
         result = json.loads(output.getvalue())
         self.assertEqual(result["status"], "stopped")

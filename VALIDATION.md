@@ -37,4 +37,6 @@ The publication process additionally checks local links, syntax, skill frontmatt
 
 A fresh repository-local virtual environment installed the package and passed all 250 tests. An independent walkthrough also copied the runtime into a temporary directory, confirmed its import path, ran the same suite, and checked that repeated configuration initialization preserved existing files and private permissions. The first miIO token extraction recipe was reviewed against pinned upstream source; no fresh Xiaomi login was performed for publication.
 
+The first Linux CI run exposed a missing HA-gateway mock in a planner-startup error test. After isolating that dependency and asserting the intended call path, all 250 tests also passed with an empty `HOME` and all `JARVIS_*` overrides removed; the temporary home directory remained empty. No production runtime change was needed for that test fix.
+
 中文说明：公开包的 250 项测试与原工程的 255 项检查是不同范围；都不能换算为实机场景数量。真实家庭信息未随仓库公开，历史故障未被包装成“已彻底修复”。
