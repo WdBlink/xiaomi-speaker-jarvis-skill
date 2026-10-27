@@ -1,0 +1,9 @@
+{
+  "python": "3.12.13",
+  "tests_run": 250,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "scope": "Bundled runtime source, mocked cloud/device transports and loopback Home Assistant server; no real hardware or accounts."
+}

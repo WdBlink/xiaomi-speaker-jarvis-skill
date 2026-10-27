@@ -1,0 +1,4 @@
+interface:
+  display_name: "小米音箱接入 Jarvis"
+  short_description: "从局域网发现到自定义模型控制 Home Assistant 的免拆机音箱接入流程"
+  default_prompt: "使用 $xiaomi-speaker-jarvis 检查我现有的音箱和家居环境，继续完成免拆机语音桥接并分层验证真实控制。"

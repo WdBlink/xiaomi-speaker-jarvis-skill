@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "base_url": "http://192.0.2.10:8123",
+  "token_file": "/EXAMPLE/private/home-jarvis/ha-token",
+  "owners": [
+    "resident"
+  ],
+  "default_room": "example_room",
+  "rooms": [
+    {
+      "id": "example_room",
+      "name": "示例客厅",
+      "aliases": [
+        "示例起居室"
+      ]
+    }
+  ],
+  "devices": [
+    {
+      "entity_id": "switch.example_light",
+      "room_id": "example_room",
+      "name": "示例灯",
+      "aliases": [
+        "示例顶灯"
+      ],
+      "actions": [
+        "on",
+        "off"
+      ]
+    },
+    {
+      "entity_id": "cover.example_curtain",
+      "room_id": "example_room",
+      "name": "示例窗帘",
+      "actions": [
+        "open",
+        "close",
+        "stop",
+        "set_position"
+      ]
+    }
+  ]
+}

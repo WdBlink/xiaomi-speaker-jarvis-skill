@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.example.home-jarvis.xiaomi-voice</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/EXAMPLE/runtime/.venv/bin/python</string>
+		<string>-m</string>
+		<string>home_jarvis.xiaomi_voice</string>
+		<string>--cloud-config</string>
+		<string>/EXAMPLE/private/home-jarvis/xiaomi-cloud-EXAMPLE_MIOT_DID.json</string>
+		<string>--speaker-config</string>
+		<string>/EXAMPLE/private/home-jarvis/speaker.json</string>
+		<string>--home-config</string>
+		<string>/EXAMPLE/private/home-jarvis/home.json</string>
+		<string>--model-config</string>
+		<string>/EXAMPLE/private/home-jarvis/minimax.json</string>
+		<string>--quiet-native-replies</string>
+		<string>--reply-volume</string>
+		<string>16</string>
+		<string>--db</string>
+		<string>/EXAMPLE/private/home-jarvis/xiaomi-voice.sqlite3</string>
+	</array>
+	<key>WorkingDirectory</key>
+	<string>/EXAMPLE/runtime</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PYTHONUNBUFFERED</key>
+		<string>1</string>
+	</dict>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+	<key>ThrottleInterval</key>
+	<integer>30</integer>
+	<key>StandardOutPath</key>
+	<string>/EXAMPLE/private/home-jarvis/xiaomi-voice.stdout.log</string>
+	<key>StandardErrorPath</key>
+	<string>/EXAMPLE/private/home-jarvis/xiaomi-voice.stderr.log</string>
+	<key>ExitTimeOut</key>
+	<integer>30</integer>
+</dict>
+</plist>

@@ -1,0 +1,7 @@
+{
+  "localip": "192.0.2.20",
+  "did": "EXAMPLE_MIOT_DID",
+  "mac": "EXAMPLE_UNICAST_MAC",
+  "model": "xiaomi.wifispeaker.s12",
+  "token": "EXAMPLE_32_HEX_TOKEN"
+}

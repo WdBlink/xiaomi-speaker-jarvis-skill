@@ -1,0 +1,7 @@
+{
+  "userId": "EXAMPLE_USER_ID",
+  "serviceToken": "EXAMPLE_SERVICE_TOKEN",
+  "deviceId": "EXAMPLE_CLOUD_DEVICE_ID",
+  "miotDID": "EXAMPLE_MIOT_DID",
+  "hardware": "S12A"
+}
